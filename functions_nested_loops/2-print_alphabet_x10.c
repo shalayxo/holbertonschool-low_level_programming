@@ -1,16 +1,21 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
- * print_alphapet -make the alphabet
- * Return: always 0
+ * print_alphabet_x10 - entry point
  */
 void print_alphabet_x10(void)
 {
-	char c;
+	char c[] = "abcdefghijklmnopqrstuvwxyz";
+	int m;
+	int y = 1;
 
-	for (c = 'a'; c <= 'z'; c++)
+	while (y <= 10)
 	{
-	_putchar(c);
-	}
+		for (m = 0; m < 26; m++)
+		{
+			_putchar(c[m]);
+		}
 	_putchar('\n');
+	y++;
+	}
 }

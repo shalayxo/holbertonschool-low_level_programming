@@ -1,26 +1,28 @@
-#include “main.h”
+#include "main.h"
+#include <stdio.h>
 /**
- * leet - primary function
- * @a:  to l33t
- *
- * Return: 0
+ * leet - encode string into 1337
+ * @str: string to be moded into 1337
+ * Return: result
  */
-char *leet(char *a)
+char *leet(char *str)
 {
-	int string;
-	int code;
-	char letter[] = {‘a’, ‘A’, ‘e’, ‘E’, ‘o’, ‘O’, ‘t’, ‘T’, ‘l’, ‘L’};
-	char number[] = {‘4’, ‘4’, ‘3’, ‘3’, ‘0’, ‘0’, ‘7’, ‘7’, ‘1’, ‘1’};
 
-	for (string = 0; a[string] != ‘\0’; string++)
+	char a[] = "AaEeOoTtLl";
+	char n[] = "4433007711";
+	int i = 0;
+	int j;
+
+	while (str[i] != '\0')
 	{
-		for (code = 0; code < 10; code++)
+		for (j = 0; j <= 10; j++)
 		{
-			if (a[string] == letter[code])
+			if (str[i] == a[j])
 			{
-				a[string] = number[code];
+				str[i] = n[j];
 			}
 		}
+		i++;
 	}
-	return (a);
+	return (str);
 }

@@ -1,26 +1,27 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
- * print_square - prints a square
- * @size: given variable
- *
- * Return: void
+ * print_square - Write a function that prints a square
+ * @size: is the size of the square
+ * Return: empty
  */
 void print_square(int size)
 {
-	int hort, vert;
+	int x, y;
 
-	if (size > 0)
-	(
-	 for (horz = 0; horz < size; horz++)
-		(
-		 	for (vert = 0; vert < size; vert++)
-			{
-				putchar('#');
-			}
+	if (size <= 0)
+	{
 		putchar('\n');
-		}
 	}
 	else
+		for (x = 0; x < size; x++)
+		{
+			for (y = 0; y < size; y++)
+			{
+				putchar(35);
+			}
 		putchar('\n');
+
+		}
+
 }

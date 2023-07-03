@@ -31,4 +31,4 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", oprt(atoi(argv[1]), atoi(argv[3])));
 	return (0);
-
+}
